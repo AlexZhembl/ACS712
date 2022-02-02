@@ -74,6 +74,12 @@ int ACS712::mA_AC(float freq)
 
   // value could be partially precalculated: C = 1000.0 * 0.5 * _mVpstep / _mVperAmpere;
   // return 1000.0 * 0.5 * point2point * _mVpstep * _formFactor / _mVperAmpere);
+  Serial.println(point2point);
+  Serial.println(_formFactor);
+  Serial.println(_mVpstep);
+  Serial.println(_mVperAmpere);
+  Serial.println("-------------------------");
+  
   return round( (500.0 * point2point) * _mVpstep * _formFactor / _mVperAmpere);
 }
 
